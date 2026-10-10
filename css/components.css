@@ -1,0 +1,698 @@
+/* ============================================================
+   TIENDA ESCOLAR SANTO TOMÁS — components.css
+   Tarjetas, botones, filtros, formularios, navegación.
+   ============================================================ */
+
+/* ---------- Encabezado / navegación ---------- */
+.encabezado {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(250, 248, 246, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: var(--border-hairline);
+}
+
+.nav-principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-2);
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.marca__sello {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid var(--color-guinda);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--color-white);
+  flex-shrink: 0;
+}
+
+.marca__sello img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+}
+
+.marca__texto {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.marca__nombre {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.marca__institucion {
+  font-size: 0.72rem;
+  color: var(--color-ink-soft);
+  letter-spacing: 0.02em;
+}
+
+.lista-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.lista-nav a {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  padding-block: 0.3rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.lista-nav a:hover,
+.lista-nav a[aria-current="page"] {
+  color: var(--color-guinda);
+  border-color: var(--color-guinda);
+}
+
+.acciones-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.boton-menu-movil {
+  display: none;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.boton-menu-movil:hover {
+  background: var(--color-plomo-soft);
+}
+
+.boton-carrito {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: var(--color-ink);
+  color: var(--color-white);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.boton-carrito:hover {
+  background: var(--color-guinda);
+  transform: translateY(-1px);
+}
+
+.boton-carrito__contador {
+  background: var(--color-rojo);
+  color: var(--color-white);
+  border-radius: 999px;
+  min-width: 20px;
+  height: 20px;
+  display: inline-grid;
+  place-items: center;
+  font-size: 0.7rem;
+  padding-inline: 0.3rem;
+}
+
+/* ---------- Botones ---------- */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+}
+
+.boton--primario {
+  background: var(--color-guinda);
+  color: var(--color-white);
+}
+
+.boton--primario:hover {
+  background: var(--color-guinda-dark);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.boton--secundario {
+  background: transparent;
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
+
+.boton--secundario:hover {
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+
+.boton--fantasma {
+  background: transparent;
+  color: var(--color-guinda);
+  padding-inline: 0.25rem;
+}
+
+.boton--fantasma:hover {
+  text-decoration: underline;
+}
+
+.boton--bloque {
+  width: 100%;
+}
+
+.boton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ---------- Insignias / badges ---------- */
+.insignia {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: var(--color-plomo-soft);
+  color: var(--color-ink-soft);
+}
+
+.insignia--pendiente {
+  background: #fbe9d0;
+  color: #7a5310;
+}
+
+.insignia--demo {
+  background: var(--color-guinda-tint);
+  color: var(--color-guinda);
+}
+
+/* ---------- Tarjeta de producto (motivo: etiqueta de prenda) ---------- */
+.rejilla-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: var(--space-4);
+}
+
+.tarjeta-producto {
+  background: var(--color-white);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.tarjeta-producto:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: var(--color-guinda);
+}
+
+.tarjeta-producto__medio {
+  aspect-ratio: 4 / 3;
+  background: var(--color-plomo-soft);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.tarjeta-producto__medio img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.tarjeta-producto__categoria {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+}
+
+.tarjeta-producto__cuerpo {
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.tarjeta-producto__subcategoria {
+  font-size: 0.72rem;
+  color: var(--color-ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tarjeta-producto__nombre {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tarjeta-producto__pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.tarjeta-producto__precio {
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.tarjeta-producto__precio--pendiente {
+  font-weight: 500;
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
+  font-style: italic;
+}
+
+/* Etiqueta tipo "etiqueta de tela" — elemento distintivo de la interfaz */
+.etiqueta-tela {
+  position: absolute;
+  top: -6px;
+  right: 14px;
+  background: var(--color-guinda);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.55rem 0.35rem;
+  border-radius: 0 0 6px 6px;
+  box-shadow: var(--shadow-sm);
+}
+
+.etiqueta-tela::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: -5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-paper);
+  border: 1px solid var(--color-guinda-dark);
+}
+
+/* ---------- Filtros / barra de búsqueda ---------- */
+.barra-herramientas-catalogo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+}
+
+.campo-busqueda {
+  position: relative;
+  flex: 1 1 260px;
+}
+
+.campo-busqueda input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.6rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-plomo-light);
+  background: var(--color-white);
+}
+
+.campo-busqueda input:focus {
+  border-color: var(--color-guinda);
+}
+
+.campo-busqueda__icono {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-plomo);
+  pointer-events: none;
+}
+
+.selector {
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-plomo-light);
+  background: var(--color-white);
+}
+
+.disposicion-catalogo {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.panel-filtros {
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  background: var(--color-white);
+  position: sticky;
+  top: 96px;
+}
+
+.panel-filtros h3 {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: var(--font-body);
+  color: var(--color-ink-soft);
+  margin-bottom: 0.6rem;
+}
+
+.grupo-filtro {
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: var(--border-hairline);
+}
+
+.grupo-filtro:last-child {
+  border-bottom: none;
+}
+
+.opcion-filtro {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.cierre-panel-filtros,
+.boton-abrir-filtros {
+  display: none;
+}
+
+/* ---------- Estado vacío ---------- */
+.estado-vacio {
+  text-align: center;
+  padding: var(--space-6) var(--space-3);
+  border: 1.5px dashed var(--color-plomo-light);
+  border-radius: var(--radius-md);
+  color: var(--color-ink-soft);
+}
+
+.estado-vacio svg {
+  width: 46px;
+  margin-bottom: var(--space-2);
+  opacity: 0.5;
+}
+
+/* ---------- Migas de pan ---------- */
+.migas {
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
+  margin-bottom: var(--space-3);
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.migas a:hover {
+  color: var(--color-guinda);
+  text-decoration: underline;
+}
+
+/* ---------- Alerta / aviso institucional ---------- */
+.aviso {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  background: var(--color-guinda-tint);
+  border: 1px solid #e3c6cb;
+  color: var(--color-guinda-dark);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+}
+
+.aviso svg {
+  flex-shrink: 0;
+  width: 20px;
+  margin-top: 0.1rem;
+}
+
+/* ---------- Ficha rápida (elemento distintivo del hero: tarjeta tipo etiqueta de prenda) ---------- */
+.ficha-rapida {
+  background: var(--color-white);
+  border: 1.5px solid var(--color-plomo-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  max-width: 340px;
+}
+
+.ficha-rapida::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px dashed var(--color-plomo-light);
+  border-radius: calc(var(--radius-lg) - 8px);
+  pointer-events: none;
+}
+
+.ficha-rapida__cabecera {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-3);
+  border-bottom: 1px dashed var(--color-plomo-light);
+}
+
+.ficha-rapida__linea {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 0.4rem;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--color-plomo-soft);
+}
+
+.ficha-rapida__linea:last-child {
+  border-bottom: none;
+}
+
+.ficha-rapida__etiqueta {
+  color: var(--color-ink-soft);
+}
+
+.ficha-rapida__valor {
+  font-weight: 600;
+}
+
+/* ---------- Pestañas (uniformes: escolares / deportivos) ---------- */
+.pestanas {
+  display: inline-flex;
+  gap: 0.35rem;
+  padding: 0.3rem;
+  background: var(--color-plomo-soft);
+  border-radius: 999px;
+  margin-bottom: var(--space-4);
+}
+
+.pestana {
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--color-ink-soft);
+}
+
+.pestana[aria-selected="true"] {
+  background: var(--color-white);
+  color: var(--color-guinda);
+  box-shadow: var(--shadow-sm);
+}
+
+.selector--talla {
+  width: 100%;
+  margin-block: 0.5rem;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+/* ---------- Tarjetas de contenido genéricas ---------- */
+.tarjeta {
+  background: var(--color-white);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+.rejilla-dos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.rejilla-tres {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+/* ---------- Formularios ---------- */
+.campo {
+  margin-bottom: var(--space-3);
+}
+
+.campo label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid var(--color-plomo-light);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  border-color: var(--color-guinda);
+}
+
+/* ---------- Selector de variante ---------- */
+.selector-variantes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip-variante {
+  padding: 0.5rem 0.9rem;
+  border: 1.5px solid var(--color-plomo-light);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--color-white);
+}
+
+.chip-variante[aria-pressed="true"] {
+  border-color: var(--color-guinda);
+  background: var(--color-guinda);
+  color: var(--color-white);
+}
+
+/* ---------- Pie de página ---------- */
+.pie-pagina {
+  background: var(--color-ink);
+  color: #d8d4d0;
+  padding-block: var(--space-6) var(--space-4);
+  margin-top: var(--space-7);
+}
+
+.pie-pagina a:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.pie-pagina__rejilla {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.pie-pagina__rejilla--tres {
+  grid-template-columns: 1.4fr 1fr 1fr;
+}
+
+.pie-pagina__titulo {
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+}
+
+.pie-pagina__lista li {
+  margin-bottom: 0.45rem;
+  font-size: 0.9rem;
+}
+
+.pie-pagina__base {
+  border-top: 1px solid #3a3532;
+  padding-top: var(--space-4);
+  font-size: 0.78rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: #a29d98;
+}
+
+/* ---------- Anuncios accesibles (aria-live) ---------- */
+.anunciador {
+  position: fixed;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  background: var(--color-ink);
+  color: var(--color-white);
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  transition: transform 0.25s ease;
+}
+
+.anunciador--visible {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ---------- Menú móvil ---------- */
+.superposicion-menu {
+  display: none;
+}

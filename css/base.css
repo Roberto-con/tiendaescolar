@@ -1,0 +1,223 @@
+/* ============================================================
+   TIENDA ESCOLAR SANTO TOMÁS — base.css
+   Variables, tipografía y estilos globales.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* --- Paleta institucional (uniforme Santo Tomás / Fe y Alegría) --- */
+  --color-guinda: #6e1f2b;       /* chompa escolar — color principal */
+  --color-guinda-dark: #4f1620;
+  --color-guinda-tint: #f4e8ea;
+  --color-rojo: #c8102e;         /* rojo institucional Fe y Alegría — acento controlado */
+  --color-plomo: #6b7280;        /* camisa / pantalón / falda */
+  --color-plomo-light: #e7e5e3;
+  --color-plomo-soft: #f3f2f0;
+  --color-white: #ffffff;
+  --color-paper: #faf8f6;
+  --color-ink: #201c1a;
+  --color-ink-soft: #57524d;
+
+  /* --- Tipografía --- */
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* --- Escala y espaciado --- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4.5rem;
+
+  --shadow-sm: 0 1px 2px rgba(32, 28, 26, 0.06), 0 1px 1px rgba(32, 28, 26, 0.04);
+  --shadow-md: 0 8px 24px rgba(32, 28, 26, 0.08);
+  --shadow-lg: 0 20px 48px rgba(32, 28, 26, 0.14);
+
+  --max-width: 1180px;
+  --border-hairline: 1px solid var(--color-plomo-light);
+
+  --focus-ring: 3px solid var(--color-rojo);
+}
+
+/* --- Reset básico --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 var(--space-2);
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 4.5vw, 3.4rem);
+  font-optical-sizing: auto;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0 0 var(--space-3);
+  color: var(--color-ink-soft);
+}
+
+/* --- Foco visible accesible en toda la app --- */
+:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* --- Utilidades de layout --- */
+.contenedor {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+.solo-lectura-pantalla {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.salto-enlace {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  background: var(--color-ink);
+  color: var(--color-white);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  z-index: 1000;
+}
+
+.salto-enlace:focus {
+  left: var(--space-3);
+  top: var(--space-3);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-guinda);
+}
+
+.seccion {
+  padding-block: var(--space-6);
+}
+
+.seccion--ajustada {
+  padding-block: var(--space-5);
+}
+
+.franja-plomo {
+  background: var(--color-plomo-soft);
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+}
+
+.franja-guinda {
+  background: var(--color-guinda);
+  color: var(--color-white);
+}
+
+.encabezado-seccion {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.encabezado-seccion p {
+  margin: 0;
+  max-width: 52ch;
+}

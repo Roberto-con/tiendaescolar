@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producto · Tienda Escolar Santo Tomás</title>
+  <meta name="description" content="Detalle de título del catálogo de libros de la Unidad Educativa Santo Tomás.">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+  <a class="salto-enlace" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <header class="encabezado">
+    <div class="contenedor nav-principal">
+      <a class="marca" href="index.html">
+        <span class="marca__sello"><img src="assets/logo/logo-santo-tomas.png"
+            alt="Escudo Unidad Educativa Santo Tomás"></span>
+        <span class="marca__texto">
+          <span class="marca__nombre">Tienda Escolar Santo Tomás</span>
+          <span class="marca__institucion">Unidad Educativa Santo Tomás · Fe y Alegría</span>
+        </span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="lista-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="uniformes.html">Uniformes</a></li>
+          <li><a href="libros-y-lectura.html">Libros y lectura</a></li>
+          <li><a href="informacion.html">Información</a></li>
+        </ul>
+      </nav>
+      <div class="acciones-nav">
+        <a class="boton-carrito" href="carrito.html" aria-label="Carrito de compras, 0 productos">
+          Carrito <span class="boton-carrito__contador">0</span>
+        </a>
+        <button class="boton-menu-movil" aria-label="Abrir menú" aria-expanded="false">
+          <span class="boton-menu-movil__icono" aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="superposicion-menu"></div>
+
+  <main id="contenido-principal">
+    <section class="seccion seccion--ajustada">
+      <div class="contenedor">
+        <p class="migas" id="migas-producto">
+          <a href="index.html">Inicio</a> / <a href="libros-y-lectura.html">Libros y lectura</a>
+        </p>
+
+        <div class="disposicion-producto" id="detalle-producto">
+          <p>Cargando…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="seccion-relacionados">
+      <div class="contenedor productos-relacionados">
+        <div class="encabezado-seccion">
+          <div>
+            <span class="eyebrow">También te puede interesar</span>
+            <h2>Títulos relacionados</h2>
+          </div>
+        </div>
+        <div class="rejilla-productos" id="productos-relacionados"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="pie-pagina__rejilla pie-pagina__rejilla--tres">
+        <div>
+          <p class="pie-pagina__titulo">Tienda Escolar Santo Tomás</p>
+          <p style="max-width:32ch">Unidad Educativa Santo Tomás · Fe y Alegría.</p>
+        </div>
+        <div>
+          <p class="pie-pagina__titulo">Explorar</p>
+          <ul class="pie-pagina__lista">
+            <li><a href="uniformes.html">Uniformes</a></li>
+            <li><a href="libros-y-lectura.html">Libros y lectura</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="pie-pagina__titulo">Institución</p>
+          <ul class="pie-pagina__lista">
+            <li><a href="informacion.html">Cómo solicitar</a></li>
+            <li><a href="informacion.html#preguntas-frecuentes">Preguntas frecuentes</a></li>
+            <li><a href="informacion.html#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pie-pagina__base">
+        <span>Unidad Educativa Santo Tomás · Fe y Alegría.</span>
+        <span>Construido con HTML, CSS y JavaScript.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/books.js"></script>
+  <script src="js/product.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uniformes · Tienda Escolar Santo Tomás</title>
+  <meta name="description" content="Uniformes escolares y deportivos de la Unidad Educativa Santo Tomás.">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+  <a class="salto-enlace" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <header class="encabezado">
+    <div class="contenedor nav-principal">
+      <a class="marca" href="index.html">
+        <span class="marca__sello"><img src="assets/logo/logo-santo-tomas.png"
+            alt="Escudo Unidad Educativa Santo Tomás"></span>
+        <span class="marca__texto">
+          <span class="marca__nombre">Tienda Escolar Santo Tomás</span>
+          <span class="marca__institucion">Unidad Educativa Santo Tomás · Fe y Alegría</span>
+        </span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="lista-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="uniformes.html">Uniformes</a></li>
+          <li><a href="libros-y-lectura.html">Libros y lectura</a></li>
+          <li><a href="informacion.html">Información</a></li>
+        </ul>
+      </nav>
+      <div class="acciones-nav">
+        <a class="boton-carrito" href="carrito.html" aria-label="Carrito de compras, 0 productos">
+          Carrito <span class="boton-carrito__contador">0</span>
+        </a>
+        <button class="boton-menu-movil" aria-label="Abrir menú" aria-expanded="false">
+          <span class="boton-menu-movil__icono" aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="superposicion-menu"></div>
+
+  <main id="contenido-principal">
+    <section class="seccion seccion--ajustada">
+      <div class="contenedor">
+        <p class="migas"><a href="index.html">Inicio</a> / <span>Uniformes</span></p>
+        <span class="eyebrow">Uniformes</span>
+        <h1>Uniformes escolares y deportivos</h1>
+        <p style="max-width:60ch">Selecciona talla y agrega al carrito para organizar tu solicitud. Los precios y la
+          disponibilidad exacta se confirman con la institución.</p>
+
+        <div class="pestanas" role="tablist" aria-label="Filtrar uniformes">
+          <button type="button" class="pestana" data-pestana-uniforme="todos" aria-selected="true">Todos</button>
+          <button type="button" class="pestana" data-pestana-uniforme="escolares"
+            aria-selected="false">Escolares</button>
+          <button type="button" class="pestana" data-pestana-uniforme="deportivos" aria-selected="false"
+            id="deportivos">Deportivos</button>
+        </div>
+
+        <div class="rejilla-productos">
+
+          <article class="tarjeta-producto" data-grupo-uniforme="escolares" data-id="uniforme-camisa-001"
+            data-nombre="Camisa institucional" data-precio="" data-moneda="BOB">
+            <div class="tarjeta-producto__medio">
+              <img src="assets/images/uniformes/camisa-institucional.png" alt="Camisa institucional Santo Tomás"
+                loading="lazy">
+            </div>
+            <div class="tarjeta-producto__cuerpo">
+              <span class="tarjeta-producto__subcategoria">Camisas</span>
+              <h3 class="tarjeta-producto__nombre">Camisa institucional</h3>
+              <span class="tarjeta-producto__precio--pendiente">Precio a confirmar</span>
+              <label class="solo-lectura-pantalla" for="talla-camisa-001">Talla</label>
+              <select class="selector selector--talla" id="talla-camisa-001">
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M" selected>M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+              <button type="button" class="boton boton--primario boton--bloque boton-agregar-estatico">Agregar al
+                carrito</button>
+            </div>
+          </article>
+
+          <article class="tarjeta-producto" data-grupo-uniforme="escolares" data-id="uniforme-pantalon-001"
+            data-nombre="Pantalón institucional" data-precio="" data-moneda="BOB">
+            <div class="tarjeta-producto__medio">
+              <img src="assets/images/uniformes/pantalon-institucional.png" alt="Pantalón institucional Santo Tomás"
+                loading="lazy">
+            </div>
+            <div class="tarjeta-producto__cuerpo">
+              <span class="tarjeta-producto__subcategoria">Pantalones</span>
+              <h3 class="tarjeta-producto__nombre">Pantalón institucional</h3>
+              <span class="tarjeta-producto__precio--pendiente">Precio a confirmar</span>
+              <label class="solo-lectura-pantalla" for="talla-pantalon-001">Talla</label>
+              <select class="selector selector--talla" id="talla-pantalon-001">
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M" selected>M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+              <button type="button" class="boton boton--primario boton--bloque boton-agregar-estatico">Agregar al
+                carrito</button>
+            </div>
+          </article>
+
+          <article class="tarjeta-producto" data-grupo-uniforme="escolares" data-id="uniforme-falda-001"
+            data-nombre="Falda institucional" data-precio="" data-moneda="BOB">
+            <div class="tarjeta-producto__medio">
+              <img src="assets/images/uniformes/falda-institucional.png" alt="Falda institucional Santo Tomás"
+                loading="lazy">
+            </div>
+            <div class="tarjeta-producto__cuerpo">
+              <span class="tarjeta-producto__subcategoria">Faldas</span>
+              <h3 class="tarjeta-producto__nombre">Falda institucional</h3>
+              <span class="tarjeta-producto__precio--pendiente">Precio a confirmar</span>
+              <label class="solo-lectura-pantalla" for="talla-falda-001">Talla</label>
+              <select class="selector selector--talla" id="talla-falda-001">
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M" selected>M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+              <button type="button" class="boton boton--primario boton--bloque boton-agregar-estatico">Agregar al
+                carrito</button>
+            </div>
+          </article>
+
+          <article class="tarjeta-producto" data-grupo-uniforme="escolares" data-id="uniforme-chompa-001"
+            data-nombre="Chompa institucional" data-precio="" data-moneda="BOB">
+            <div class="tarjeta-producto__medio">
+              <img src="assets/images/uniformes/chompa-institucional.png" alt="Chompa institucional Santo Tomás"
+                loading="lazy">
+              <span class="etiqueta-tela">Destacado</span>
+            </div>
+            <div class="tarjeta-producto__cuerpo">
+              <span class="tarjeta-producto__subcategoria">Chompas</span>
+              <h3 class="tarjeta-producto__nombre">Chompa institucional</h3>
+              <span class="tarjeta-producto__precio--pendiente">Precio a confirmar</span>
+              <label class="solo-lectura-pantalla" for="talla-chompa-001">Talla</label>
+              <select class="selector selector--talla" id="talla-chompa-001">
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M" selected>M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+              <button type="button" class="boton boton--primario boton--bloque boton-agregar-estatico">Agregar al
+                carrito</button>
+            </div>
+          </article>
+
+          <article class="tarjeta-producto" data-grupo-uniforme="escolares" data-id="uniforme-corbata-001"
+            data-nombre="Corbata institucional" data-precio="" data-moneda="BOB">
+            <div class="tarjeta-producto__medio">
+              <img src="assets/images/uniformes/corbata-institucional.png" alt="Corbata institucional Santo Tomás"
+                loading="lazy">
+            </div>
+            <div class="tarjeta-producto__cuerpo">
+              <span class="tarjeta-producto__subcategoria">Corbatas</span>
+              <h3 class="tarjeta-producto__nombre">Corbata institucional</h3>
+              <span class="tarjeta-producto__precio--pendiente">Precio a confirmar</span>
+              <label class="solo-lectura-pantalla" for="talla-corbata-001">Talla</label>
+              <select class="selector selector--talla" id="talla-corbata-001">
+                <option value="Única" selected>Talla única</option>
+              </select>
+              <button type="button" class="boton boton--primario boton--bloque boton-agregar-estatico">Agregar al
+                carrito</button>
+            </div>
+          </article>
+
+          <article class="tarjeta-producto" data-grupo-uniforme="deportivos" data-id="deportivo-polera-001"
+            data-nombre="Polera deportiva" data-precio="" data-moneda="BOB">
+            <div class="tarjeta-producto__medio">
+              <img src="assets/images/deportivo/polera-deportiva.png" alt="Polera deportiva Santo Tomás" loading="lazy">
+              <span class="etiqueta-tela">Destacado</span>
+            </div>
+            <div class="tarjeta-producto__cuerpo">
+              <span class="tarjeta-producto__subcategoria">Poleras</span>
+              <h3 class="tarjeta-producto__nombre">Polera deportiva</h3>
+              <span class="tarjeta-producto__precio--pendiente">Precio a confirmar</span>
+              <label class="solo-lectura-pantalla" for="talla-polera-001">Talla</label>
+              <select class="selector selector--talla" id="talla-polera-001">
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M" selected>M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+              <button type="button" class="boton boton--primario boton--bloque boton-agregar-estatico">Agregar al
+                carrito</button>
+            </div>
+          </article>
+
+          <article class="tarjeta-producto" data-grupo-uniforme="deportivos" data-id="deportivo-short-001"
+            data-nombre="Short deportivo" data-precio="" data-moneda="BOB">
+            <div class="tarjeta-producto__medio">
+              <img src="assets/images/deportivo/short-deportivo.png" alt="Short deportivo Santo Tomás" loading="lazy">
+            </div>
+            <div class="tarjeta-producto__cuerpo">
+              <span class="tarjeta-producto__subcategoria">Shorts</span>
+              <h3 class="tarjeta-producto__nombre">Short deportivo</h3>
+              <span class="tarjeta-producto__precio--pendiente">Precio a confirmar</span>
+              <label class="solo-lectura-pantalla" for="talla-short-001">Talla</label>
+              <select class="selector selector--talla" id="talla-short-001">
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M" selected>M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+              <button type="button" class="boton boton--primario boton--bloque boton-agregar-estatico">Agregar al
+                carrito</button>
+            </div>
+          </article>
+
+          <article class="tarjeta-producto" data-grupo-uniforme="deportivos" data-id="deportivo-pantalon-001"
+            data-nombre="Pantalón deportivo" data-precio="" data-moneda="BOB">
+            <div class="tarjeta-producto__medio">
+              <img src="assets/images/deportivo/pantalon-deportivo.png" alt="Pantalón deportivo Santo Tomás"
+                loading="lazy">
+            </div>
+            <div class="tarjeta-producto__cuerpo">
+              <span class="tarjeta-producto__subcategoria">Pantalones deportivos</span>
+              <h3 class="tarjeta-producto__nombre">Pantalón deportivo</h3>
+              <span class="tarjeta-producto__precio--pendiente">Precio a confirmar</span>
+              <label class="solo-lectura-pantalla" for="talla-pantalon-dep-001">Talla</label>
+              <select class="selector selector--talla" id="talla-pantalon-dep-001">
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M" selected>M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+              <button type="button" class="boton boton--primario boton--bloque boton-agregar-estatico">Agregar al
+                carrito</button>
+            </div>
+          </article>
+
+          <article class="tarjeta-producto" data-grupo-uniforme="deportivos" data-id="deportivo-chamarra-001"
+            data-nombre="Chamarra deportiva" data-precio="" data-moneda="BOB">
+            <div class="tarjeta-producto__medio">
+              <img src="assets/images/deportivo/chamarra-deportiva.png" alt="Chamarra deportiva Santo Tomás"
+                loading="lazy">
+            </div>
+            <div class="tarjeta-producto__cuerpo">
+              <span class="tarjeta-producto__subcategoria">Chamarras</span>
+              <h3 class="tarjeta-producto__nombre">Chamarra deportiva</h3>
+              <span class="tarjeta-producto__precio--pendiente">Precio a confirmar</span>
+              <label class="solo-lectura-pantalla" for="talla-chamarra-001">Talla</label>
+              <select class="selector selector--talla" id="talla-chamarra-001">
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M" selected>M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+              <button type="button" class="boton boton--primario boton--bloque boton-agregar-estatico">Agregar al
+                carrito</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="pie-pagina__rejilla pie-pagina__rejilla--tres">
+        <div>
+          <p class="pie-pagina__titulo">Tienda Escolar Santo Tomás</p>
+          <p style="max-width:32ch">Unidad Educativa Santo Tomás · Fe y Alegría.</p>
+        </div>
+        <div>
+          <p class="pie-pagina__titulo">Explorar</p>
+          <ul class="pie-pagina__lista">
+            <li><a href="uniformes.html">Uniformes</a></li>
+            <li><a href="libros-y-lectura.html">Libros y lectura</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="pie-pagina__titulo">Institución</p>
+          <ul class="pie-pagina__lista">
+            <li><a href="informacion.html">Cómo solicitar</a></li>
+            <li><a href="informacion.html#preguntas-frecuentes">Preguntas frecuentes</a></li>
+            <li><a href="informacion.html#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pie-pagina__base">
+        <span>Unidad Educativa Santo Tomás · Fe y Alegría.</span>
+        <span>Construido con HTML, CSS y JavaScript.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/uniformes.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libros y lectura · Tienda Escolar Santo Tomás</title>
+  <meta name="description" content="Libros de apoyo, lectura y novelas de la Unidad Educativa Santo Tomás.">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+  <a class="salto-enlace" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <header class="encabezado">
+    <div class="contenedor nav-principal">
+      <a class="marca" href="index.html">
+        <span class="marca__sello"><img src="assets/logo/logo-santo-tomas.png"
+            alt="Escudo Unidad Educativa Santo Tomás"></span>
+        <span class="marca__texto">
+          <span class="marca__nombre">Tienda Escolar Santo Tomás</span>
+          <span class="marca__institucion">Unidad Educativa Santo Tomás · Fe y Alegría</span>
+        </span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="lista-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="uniformes.html">Uniformes</a></li>
+          <li><a href="libros-y-lectura.html">Libros y lectura</a></li>
+          <li><a href="informacion.html">Información</a></li>
+        </ul>
+      </nav>
+      <div class="acciones-nav">
+        <a class="boton-carrito" href="carrito.html" aria-label="Carrito de compras, 0 productos">
+          Carrito <span class="boton-carrito__contador">0</span>
+        </a>
+        <button class="boton-menu-movil" aria-label="Abrir menú" aria-expanded="false">
+          <span class="boton-menu-movil__icono" aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="superposicion-menu"></div>
+
+  <main id="contenido-principal">
+    <section class="seccion seccion--ajustada">
+      <div class="contenedor">
+        <p class="migas"><a href="index.html">Inicio</a> / <span>Libros y lectura</span></p>
+        <span class="eyebrow">Libros y lectura</span>
+        <h1>Libros de apoyo, cuentos y novelas</h1>
+
+        <div class="barra-herramientas-catalogo">
+          <div class="campo-busqueda">
+            <span class="campo-busqueda__icono" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5" />
+                <path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </span>
+            <label for="busqueda-libros" class="solo-lectura-pantalla">Buscar libros</label>
+            <input type="search" id="busqueda-libros" placeholder="Buscar por título, materia o autor…">
+          </div>
+        </div>
+
+        <div class="pestanas" role="tablist" aria-label="Filtrar por categoría">
+          <button type="button" class="pestana" data-filtro-categoria-libro="">Todos</button>
+          <button type="button" class="pestana" data-filtro-categoria-libro="libros-de-apoyo">Libros de apoyo</button>
+          <button type="button" class="pestana" data-filtro-categoria-libro="lectura-y-novelas">Lectura y
+            novelas</button>
+        </div>
+
+        <p class="resultado-conteo" id="conteo-resultados-libros" aria-live="polite"></p>
+
+        <div class="rejilla-productos" id="rejilla-libros" aria-live="polite" style="margin-top:1rem"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="pie-pagina__rejilla pie-pagina__rejilla--tres">
+        <div>
+          <p class="pie-pagina__titulo">Tienda Escolar Santo Tomás</p>
+          <p style="max-width:32ch">Unidad Educativa Santo Tomás · Fe y Alegría.</p>
+        </div>
+        <div>
+          <p class="pie-pagina__titulo">Explorar</p>
+          <ul class="pie-pagina__lista">
+            <li><a href="uniformes.html">Uniformes</a></li>
+            <li><a href="libros-y-lectura.html">Libros y lectura</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="pie-pagina__titulo">Institución</p>
+          <ul class="pie-pagina__lista">
+            <li><a href="informacion.html">Cómo solicitar</a></li>
+            <li><a href="informacion.html#preguntas-frecuentes">Preguntas frecuentes</a></li>
+            <li><a href="informacion.html#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pie-pagina__base">
+        <span>Unidad Educativa Santo Tomás · Fe y Alegría.</span>
+        <span>Construido con HTML, CSS y JavaScript.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/books.js"></script>
+</body>
+
+</html>
